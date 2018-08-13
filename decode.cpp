@@ -6,6 +6,9 @@
 #include <bitset> // memcpy
 using namespace std;
 
+// reads values in the test_de.txt value and writes decoded
+// ints to test_decoded.txt
+
 short int decode(string snum){
     stringstream ss(snum);
     short int bnum;
@@ -23,7 +26,7 @@ short int decode(string snum){
 int main(){
     string temp14;
     ifstream tests;
-    tests.open("test_encoded.txt");
+    tests.open("test_de.txt");
     ofstream myfile;
     myfile.open ("test_decoded.txt");
     while(tests >> temp14){

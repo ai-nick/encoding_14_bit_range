@@ -6,6 +6,9 @@
 #include <bitset> // memcpy
 using namespace std;
 
+//reads input ints from test_en.txt and writes encoded strings 
+//to test_encoded.txt
+
 string encode(short int shmumber){
     if (shmumber < -8192 or shmumber > 8191){
         return "number out of range for this encoder";
@@ -30,7 +33,7 @@ string encode(short int shmumber){
 int main(){
     short int temp14;
     ifstream tests;
-    tests.open("test.txt");
+    tests.open("test_en.txt");
     ofstream myfile;
     myfile.open ("test_encoded.txt");
     while(tests >> temp14){

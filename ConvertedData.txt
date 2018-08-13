@@ -1,0 +1,13 @@
+Encode output:
+6f5f
+4354
+2b3c
+3f01
+7b7e
+
+Decode output:
+-6902
+-8151
+-113
+512
+3967
