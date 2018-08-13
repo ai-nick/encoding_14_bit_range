@@ -13,8 +13,6 @@ string encode(short int shmumber){
         shmumber = shmumber + 8192;
     }
     short int num = shmumber << 1;
-    bitset<16> before(shmumber);
-    cout << "before: " << before << endl;
     for (int ix = 16; ix > 8; ix--){
         int x = (num >> ix) & 1U;
         shmumber ^= (-x ^ shmumber) & (1UL << ix);
@@ -28,9 +26,6 @@ string encode(short int shmumber){
     return hxstring.str();
 }
 
-int decode(string snumber){
-    return 0;
-}
 
 int main(){
     short int temp14;
@@ -44,5 +39,6 @@ int main(){
     }
     myfile.close();
     tests.close();
+    
     return 0;
 }
